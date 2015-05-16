@@ -142,3 +142,52 @@
 .source-list.left {
   border-right: 1px solid rgb
 }
+
+/*
+ * Content Areas
+ */
+
+.container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/*
+ * Custom
+ */
+
+.container {
+  height: -webkit-calc(100% - 6px - 3px - 24px - 18px);
+}
+
+.fold {
+  padding: 24px;
+
+  background-color: #fdf6e3;
+
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+
+  text-align: center;
+}
+
+.fold h2 {
+  margin-bottom: 12px;
+}
+
+.main-info .left {
+  float: left;
+  width: 50%;
+}
+
+.main-info .left p {
+  padding: 24px;
+}
+
+.main-info .right {
+  float: left;
+  width: 50%;
+}
+
+.main-info .right img {
+  width: 100%;
+}
