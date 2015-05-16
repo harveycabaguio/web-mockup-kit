@@ -20,9 +20,16 @@
   display: inline-block;
   height: 22px;
   width: 22px;
-  margin-right: 9px;
   
   border: 1px solid rgba(0,0,0,0);  
+}
+
+.left .window.control {
+  margin-right: 9px;
+}
+
+.right .window.control {
+  margin-left: 9px;
 }
 
 .window.control svg {
@@ -46,6 +53,9 @@
  */
 
 .toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
   padding: 6px;
   
   background-image: linear-gradient(rgb(222,222,222), rgb(186,186,186));
@@ -60,6 +70,20 @@
   text-shadow: 0 1px rgba(255,255,255,0.4);
 }
 
+.toolbar .left {
+  order: 1;
+}
+
+.toolbar .center {
+  order: 2;
+  flex-grow: 1;
+}
+
+.toolbar .right {
+  order: 3;
+}
+
+/* vertically center all toolbar items */
 .toolbar * {
   vertical-align: middle;
 }

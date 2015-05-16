@@ -270,6 +270,10 @@ a.button {
   box-shadow: none;
 }
 
+.button.icon img {
+  margin-top: -1px;
+}
+
 .toolbar .button.icon:hover {
   background-color: rgba(0,0,0,0.1);
 }
@@ -417,3 +421,14 @@ input[type=number]::-webkit-inner-spin-button {
  * Switch
  */
 
+
+
+/*
+ * Fonts
+ */
+
+.header {
+  color: rgb(122,122,122);
+  font-weight: bold;
+  text-align: center;
+}
