@@ -158,6 +158,7 @@ svg {
 .container.slider {
   height: 21px;
   padding-top: 3px;
+  overflow-y: auto
 }
 
 input[type=range] {
