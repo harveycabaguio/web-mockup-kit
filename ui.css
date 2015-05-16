@@ -1,0 +1,419 @@
+body,
+nav,
+div,
+a,
+h1,
+h2,
+h3,
+p,
+input,
+label,
+select
+{
+  margin: 0;
+  padding: 0;
+  
+  color: rgb(51,51,51);
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 9pt;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+svg {
+  fill: rgb(98,98,98);
+}
+
+/*
+ * Text Field
+ */
+
+.entry,
+.check,
+.radio {
+  -webkit-appearance: none;
+  
+  display: inline-block;
+  background-image: linear-gradient(rgb(237,237,237), rgb(247,247,247));
+    
+  border: 1px solid rgba(0,0,0,0.22);
+  border-radius: 2.5px;
+  
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.042),
+              inset 0 0 0 1px rgba(0,0,0,0.018),
+              0 1px 0 0 rgba(255,255,255,0.3);
+  
+  color: rgba(51,51,51);
+  text-shadow: 0 1px rgba(255,255,255,0.4);
+    
+  padding: 4px;
+  height: 14px;
+  
+  transition: all 200ms ease-out;
+}
+
+.entry::selection {
+  background-color: rgba(61,155,218);
+}
+
+.toolbar .entry {
+  background-clip: padding-box;
+  background-image: linear-gradient(rgba(0,0,0,0.08), transparent 5px), linear-gradient(rgb(237,237,237), rgb(255,255,255));
+  border-color: rgba(0,0,0,0.27);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06),
+              0 1px 0 0 rgba(255,255,255,0.3);
+}
+
+.entry:focus {
+  border-color: rgba(61,155,218,0.8);
+  box-shadow: inset 0 0 0 1px rgba(61,155,218,0.23),
+              0 1px 0 0 rgba(255,255,255,0.3);
+  transition: all 200ms ease-in;
+  outline: none;
+}
+
+.entry:disabled {
+  background-image: none;
+  border 1px solid rgba(0,0,0,0.165);
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.03),
+              inset 0 0 0 1px rgba(0,0,0,0.012),
+              0 1px 0 0 rgba(255,255,255,0.3);
+  color: rgb(184,184,184);
+}
+
+.toolbar .entry:disabled {
+  background-image: linear-gradient(rgba(0,0,0,0.05), transparent 5px);
+  border-color: rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06),
+              0 1px 0 0 rgba(255,255,255,0.3)
+}
+
+/*
+ * Progress Bar
+ */
+
+.progressbar {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+}
+
+.progressbar,
+.progressbar::-webkit-progress-bar {
+  height: 12px;
+  margin-top: -1px;
+  margin-left: -1px;
+  background-image: linear-gradient(rgb(244,244,244),
+                                    rgb(233,233,233) 50%,
+                                    rgb(206,206,206) 60%,
+                                    rgb(206,206,206) 70%,
+                                    rgb(233,233,233));
+  border: 1px solid rgb(164,164,164);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.progressbar::-webkit-progress-value {
+  height: 12px;
+  margin-top: -1px;
+  margin-left: -1px;
+  
+  background-image: linear-gradient(rgb(79,201,255),
+                                    rgb(73,186,255) 50%,
+                                    rgb(66,167,235) 60%,
+                                    rgb(66,167,235) 70%,
+                                    rgb(79,201,255));
+  border: 1px solid rgb(59,150,210);
+  border-radius: 6px;
+  
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
+              inset 0 -1px 0 0 rgba(255,255,255,0.25);
+}
+
+.progressbar::-moz-progress-bar {
+  height: 12px;
+  margin-top: -1px;
+  margin-left: -1px;
+  
+  background-image: linear-gradient(rgb(79,201,255),
+                                    rgb(73,186,255) 50%,
+                                    rgb(66,167,235) 60%,
+                                    rgb(66,167,235) 70%,
+                                    rgb(79,201,255));
+  border: 1px solid rgb(59,150,210);
+  border-radius: 6px;
+  
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
+              inset 0 -1px 0 0 rgba(255,255,255,0.25);
+}
+
+/*
+ * Scale
+ */
+
+.container.slider {
+  height: 21px;
+  padding-top: 3px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 4px;
+  
+  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.07));
+  
+  border: 1px solid rgba(0,0,0,0.35);
+  border-radius: 4px;
+  
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03),
+              0 1px 0 0 rgba(255,255,255,0.3);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  
+  background-image: linear-gradient(rgba(255,255,255,1.0), rgba(224,224,224,1.0));
+  
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 10px;
+  
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.096),
+              inset 0 1px 0 0 rgba(255,255,255,0.864),
+              inset 0 -1px 0 0 rgba(255,255,255,0.288),
+              0 1px 1px rgba(0,0,0,0.15);
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  border: 1px solid rgba(61,155,218,0.9);
+}
+
+/*
+ * Button
+ */
+
+.button {
+  height: 24px;
+  padding: 0 12px;
+  
+  background-image: linear-gradient(transparent, transparent 50%, rgba(0,0,0,0.04));
+  
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2.5px;
+  
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05),
+              inset 0 1px 0 0 rgba(255,255,255,0.45),
+              inset 0 -1px 0 0 rgba(255,255,255,0.15),
+              0 1px 0 0 rgba(255,255,255,0.15);
+  
+  color: rgb(51,51,51);
+  text-shadow: 0 1px rgba(255,255,255,0.4);
+  
+  transition: all 200ms ease-in;
+}
+
+/* fixes for buttons made with anchors */
+a.button {
+  display: inline-block;
+  height: 22px;
+  
+  line-height: 22px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.toolbar .button {
+  border-color: rgba(0,0,0,0.27);
+  
+  color: rgb(89,89,89);
+}
+
+.secondary .button {
+  height: 100%;
+  
+  border-color: rgba(0,0,0,0.3);
+  
+  line-height: 18px;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  
+  border-color: rgb(61,155,218);
+  
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05),
+              inset 0 1px 0 0 rgba(255,255,255,0.45),
+              inset 0 -1px 0 0 rgba(255,255,255,0.15),
+              0 0 0 1px rgba(61,155,218,0.25);
+  
+  color: rgb(51,51,51);
+  
+  transition: all 100ms ease-out;
+}
+
+.toolbar .button.icon {
+  padding: 4px;
+  margin: 3px;
+  
+  background: transparent;
+
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 100%;
+  
+  box-shadow: none;
+}
+
+.toolbar .button.icon:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.button:active,
+.button.active,
+.button.icon:active,
+.button.icon.active,
+.window.control:hover {
+  outline: none;
+  
+  background-color: rgba(0,0,0,0.05);
+  
+  border-color: rgba(0,0,0,0.25);
+  
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05),
+              0 1px 0 0 rgba(255,255,255,0.3);
+}
+
+.button.help {
+  border-radius: 100px;
+  width: 24px;
+}
+
+.button.suggested {
+  background-image: linear-gradient(rgb(79,202,255), rgb(61,155,218));
+  
+  border-color: rgb(55,140,196);
+  
+  color: rgb(255,255,255);
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+}
+
+.button.destructive {
+  background-image: linear-gradient(rgb(255,60,68), rgb(201,46,52));
+  
+  border-color: rgb(181,41,47);
+  
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05),
+              inset 0 1px 0 0 rgba(255,255,255,0.25),
+              inset 0 -1px 0 0 rgba(255,255,255,0.1),
+              0 1px 0 0 rgba(255,255,255,0.15);
+  
+  color: rgb(255,255,255);
+  text-shadow: 0 1px rgba(0,0,0,0.2);
+}
+
+/*
+ * Spin Entry
+ */
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+  display: inline-block;
+  margin-top: -16px;
+  margin-right: 7px;
+  height: 44px;
+  width: 23px;
+  
+  background-image: url("assets/spin.png");
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom-left-radius: 3.5px;
+  border-bottom-right-radius: 3.5px;
+  
+  opacity: 1.0;
+  transform: rotate(-90deg);
+}
+
+/*
+ * Linked Button
+ */
+
+.button-tab {
+  font-size: 0;
+}
+
+.button.left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button.middle {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.button.right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/*
+ * ComboBox
+ */
+
+.button.combo {
+  padding-left: 2px;
+}
+
+/*
+ * Checkboxes and Radios
+ */
+
+.check,
+.radio {
+  height: 14px;
+  width: 14px;
+  margin: 3px;
+}
+
+.check:focus,
+.radio:focus {
+  outline: none;
+}
+
+.check:hover,
+.radio:hover {
+  border-color: rgb(61,155,218);
+}
+
+.check:checked {
+  background-image: url("assets/check-active.svg");
+  background-position: center;
+  border: none;
+}
+
+.radio {
+  border-radius: 10px;
+}
+
+.radio:checked {
+  background-image: url("assets/radio-active.svg");
+  background-position: center;
+  border: none;
+}
+
+/*
+ * Switch
+ */
+
