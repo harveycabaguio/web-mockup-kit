@@ -35,6 +35,9 @@ svg {
   -webkit-appearance: none;
   
   display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+
   background-image: linear-gradient(rgb(237,237,237), rgb(247,247,247));
     
   border: 1px solid rgba(0,0,0,0.22);
@@ -264,7 +267,7 @@ a.button {
   
   background: transparent;
 
-  border: 1px solid rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
   border-radius: 100%;
   
   box-shadow: none;
@@ -366,7 +369,7 @@ input[type=number]::-webkit-inner-spin-button {
   border-bottom-right-radius: 0;
 }
 
-.button.middle {
+.button.center {
   order: 2;
   flex: 1;
 
