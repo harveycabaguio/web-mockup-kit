@@ -138,12 +138,15 @@
  */
 
 .source-list {
+  height: 100%;
+  width: 200px;
+  float: left;
   background-color: rgba(235,235,235,0.96);
   color: rgb(111,111,111);
 }
 
 .source-list.left {
-  border-right: 1px solid rgb
+  border-right: 1px solid rgb();
 }
 
 /*
@@ -151,7 +154,7 @@
  */
 
 .container {
-  height: 100%;
+  float: left;
   overflow-y: scroll;
 }
 
