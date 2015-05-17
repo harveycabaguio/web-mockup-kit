@@ -74,15 +74,18 @@
 
 .toolbar .left {
   order: 1;
+  align-self: center;
 }
 
 .toolbar .center {
   order: 2;
   flex-grow: 1;
+  align-self: center;
 }
 
 .toolbar .right {
   order: 3;
+  align-self: center;
 }
 
 /* vertically center all toolbar items */
