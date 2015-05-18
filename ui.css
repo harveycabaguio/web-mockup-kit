@@ -6,6 +6,7 @@ h1,
 h2,
 h3,
 p,
+ul,
 input,
 label,
 select
@@ -16,6 +17,7 @@ select
   color: rgb(51,51,51);
   font-family: 'Droid Sans', sans-serif;
   font-size: 9pt;
+  list-style: none;
   
   -webkit-user-select: none;
   user-select: none;
@@ -153,9 +155,8 @@ svg {
  */
 
 .container.slider {
-  height: 21px;
-  padding-top: 3px;
-  overflow-y: auto
+  height: 24px;
+  align-items: center;
 }
 
 input[type=range] {
@@ -474,6 +475,9 @@ select {
 .header {
   color: rgb(122,122,122);
   font-weight: bold;
+}
+
+.toolbar .header {
   text-align: center;
 }
 
