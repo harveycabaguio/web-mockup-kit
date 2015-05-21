@@ -210,7 +210,10 @@
 }
 
 .source-list .header {
-  padding: 6px 8px;
+  padding: 5px 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 /*
