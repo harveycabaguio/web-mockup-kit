@@ -222,13 +222,60 @@
 
 .container {
   display: flex;
-  overflow-y: auto;
   height: calc(100% - 51px - 48px);
 }
 
 .content {
   order: 3;
   flex: 1;
+}
+
+.content.widgets {
+  overflow-y: auto;
+  padding: 24px;
+  background-color: rgb(248,248,248);
+}
+
+.content.widgets .button-linked {
+  margin-bottom: 24px;
+}
+
+.prefs {
+  display: flex;
+  flex-direction: column;
+}
+
+.prefs .item {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.item .left {
+  align-self: center;
+  order: 1;
+  flex-basis: 15%;
+  margin-right: 12px;
+  text-align: right;
+}
+
+.item .right {
+  order: 2;
+}
+
+ul span {
+  display: block;
+  height: 24px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+.item:last-child .left {
+  text-align: left;
+  flex-basis: auto;
+  margin-right: auto;
 }
 
 /*

@@ -37,8 +37,6 @@ svg {
   -webkit-appearance: none;
   
   display: inline-block;
-  margin-left: 3px;
-  margin-right: 3px;
 
   background-image: linear-gradient(rgb(237,237,237), rgb(247,247,247));
     
@@ -155,8 +153,9 @@ svg {
  */
 
 .container.slider {
-  height: 24px;
-  align-items: center;
+  display: inline-block;
+  height: 20px;
+  padding-top: 4px;
 }
 
 input[type=range] {
@@ -303,8 +302,10 @@ a.button {
 }
 
 .button.help {
-  border-radius: 100px;
+  padding: 0;
   width: 24px;
+  border-radius: 100px;
+  text-align: center;
 }
 
 .button.suggested {
