@@ -76,20 +76,28 @@
 }
 
 .toolbar .left {
-  order: 1;
   align-self: center;
   margin-right: auto;
+
+  display: flex;
+}
+
+.toolbar .left * {
+  flex-basis: auto;
+  align-self: center;
 }
 
 .toolbar .center {
-  order: 2;
   flex-grow: 1;
   align-self: center;
+
+  display: flex;
 }
 
 .toolbar .right {
-  order: 3;
   align-self: center;
+
+  display: flex;
 }
 
 /* vertically center all toolbar items */
@@ -156,7 +164,6 @@
 .source-list {
   position: relative;
 
-  order: 1;
   overflow-y: auto;
   align-self: stretch;
   width: 172px;
@@ -226,7 +233,6 @@
 }
 
 .content {
-  order: 3;
   flex: 1;
 }
 
@@ -252,19 +258,9 @@
 
 .item .left {
   align-self: center;
-  order: 1;
   flex-basis: 15%;
   margin-right: 12px;
   text-align: right;
-}
-
-.item .right {
-  order: 2;
-}
-
-ul span {
-  display: block;
-  height: 24px;
 }
 
 .item:last-child {
@@ -276,40 +272,4 @@ ul span {
   text-align: left;
   flex-basis: auto;
   margin-right: auto;
-}
-
-/*
- * Custom
- */
-
-.fold {
-  padding: 24px;
-
-  background-color: #fdf6e3;
-
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-
-  text-align: center;
-}
-
-.fold h2 {
-  margin-bottom: 12px;
-}
-
-.main-info .left {
-  float: left;
-  width: 50%;
-}
-
-.main-info .left p {
-  padding: 24px;
-}
-
-.main-info .right {
-  float: left;
-  width: 50%;
-}
-
-.main-info .right img {
-  width: 100%;
 }

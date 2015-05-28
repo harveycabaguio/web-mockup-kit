@@ -28,8 +28,10 @@
             </svg>
           </a>
           <a class="button icon" href="#"><img src="mail-message-new.svg"></a>
-          <a class="button" href="#">Anchor Button</a>
-          <input class="button" type="button" value="Input Button">
+          <div class="button-linked">
+            <a class="button left">Left</a>
+            <a class="button right">Right</a>
+          </div>
         </div>
         <div class="center">
           <div class="button-linked">
@@ -183,11 +185,13 @@
             </div>
             <div class="item">
               <p class="left">Combobox:</p>
-              <select class="right button combo">
-                <option>Hello</option>
-                <option>Hello</option>
-                <option>Hello</option>
-              </select>
+              <div class="container right">
+                <select class="button combo">
+                  <option>Hello</option>
+                  <option>Hello</option>
+                  <option>Hello</option>
+                </select>
+              </div>
             </div>
             <p class="item header">Heading 2:</p>
             <div class="item">
@@ -214,18 +218,18 @@
             <div class="item">
               <p class="left">Checkboxes:</p>
               <ul class="right">
-                <span>
+                <li>
                   <input class="check" type="checkbox" id="1">
                   <label for="1">Check Box</label>
-                </span>
-                <span>
+                </li>
+                <li>
                   <input class="check" type="checkbox" id="2">
                   <label for="2">Check Box</label>
-                </span>
-                <span>
+                </li>
+                <li>
                   <input class="check" type="checkbox" id="3">
                   <label for="3">Check Box</label>
-                </span>
+                </li>
               </ul>
             </div>
             <div class="item">

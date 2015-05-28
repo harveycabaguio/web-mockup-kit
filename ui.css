@@ -142,7 +142,7 @@ svg {
                                     rgb(66,167,235) 70%,
                                     rgb(79,201,255));
   border: 1px solid rgb(59,150,210);
-  border-radius: 6px;
+  border-radius: 2.5px;
   
   box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
               inset 0 -1px 0 0 rgba(255,255,255,0.25);
@@ -179,7 +179,7 @@ input[type=range]::-webkit-slider-thumb {
   background-image: linear-gradient(rgba(255,255,255,1.0), rgba(224,224,224,1.0));
   
   border: 1px solid rgba(0,0,0,0.25);
-  border-radius: 10px;
+  border-radius: 50%;
   
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.096),
               inset 0 1px 0 0 rgba(255,255,255,0.864),
@@ -273,7 +273,7 @@ a.button {
   background: transparent;
 
   border-color: transparent;
-  border-radius: 100%;
+  border-radius: 50%;
   
   box-shadow: none;
 }
@@ -304,7 +304,7 @@ a.button {
 .button.help {
   padding: 0;
   width: 24px;
-  border-radius: 100px;
+  border-radius: 50%;
   text-align: center;
 }
 
@@ -416,13 +416,15 @@ input[type=number]::-webkit-inner-spin-button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1px;
-  width: 50%;
 
   text-align: center;
 }
 
+.button-linked .button {
+  padding: 0;
+}
+
 .button.left {
-  order: 1;
   flex: 1;
 
   border-top-right-radius: 0;
@@ -430,18 +432,16 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .button.center {
-  order: 2;
   flex: 1;
 
   border-radius: 0;
   border-left: none;
-  border-right: none;
 }
 
 .button.right {
-  order: 3;
   flex: 1;
 
+  border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -487,7 +487,7 @@ select {
 }
 
 .radio {
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .radio:checked {
