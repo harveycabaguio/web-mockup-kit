@@ -309,7 +309,7 @@ a.button {
 }
 
 .button.suggested,
-.popover .item:last-child a:hover {
+.popover a:hover {
   background-image: linear-gradient(rgb(79,202,255), rgb(61,155,218));
   
   border-color: rgb(55,140,196);
