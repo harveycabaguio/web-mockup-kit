@@ -256,19 +256,19 @@
   margin-bottom: 12px;
 }
 
-.item .left {
+.prefs .item .left {
   align-self: center;
   flex-basis: 15%;
   margin-right: 12px;
   text-align: right;
 }
 
-.item:last-child {
+.prefs .item:last-child {
   margin-bottom: 0;
   margin-top: 12px;
 }
 
-.item:last-child .left {
+.prefs .item:last-child .left {
   text-align: left;
   flex-basis: auto;
   margin-right: auto;
