@@ -31,11 +31,15 @@ svg {
   fill: rgb(98,98,98);
 }
 
+img {
+  display: inline-block;
+}
+
 /*
  * Fonts
  */
 
-.toolbar .header {
+.bar .header {
   text-align: center;
 }
 
@@ -165,12 +169,40 @@ p {
  * Toolbars
  */
 
-.toolbar {
+.bar {
   display: flex;
   flex-wrap: nowrap;
-  align-items: baseline;
-  padding: 6px;
-  width: calc(100% - 12px);
+  align-items: center;
+}
+
+  /* vertically center .left .right .center */
+  .bar > * {
+    align-items: center;
+    display: flex;
+  }
+
+    /* items in .left .right .center are flex */
+    .bar > * > * {
+      display: flex;
+    }
+
+      .bar > * > * > * {
+        align-self: baseline;
+      }
+
+    /* when there's no .center present makes .right align to the right */
+    .bar > .left {
+      margin-right: auto;
+    }
+
+    .bar > .center {
+      flex-grow: 1;
+    }
+
+/* headerbar */
+.bar.header {
+  padding: 9px;
+  width: calc(100% - 18px);
 
   background-image: linear-gradient(rgb(222,222,222), rgb(186,186,186));
 
@@ -184,37 +216,8 @@ p {
   text-shadow: 0 1px rgba(255,255,255,0.4);
 }
 
-  /* vertically center all toolbar items */
-  .toolbar * {
-    vertical-align: middle;
-  }
-
-  .toolbar .left {
-    align-self: center;
-    margin-right: auto;
-
-    display: flex;
-  }
-
-    .toolbar .left * {
-      flex-basis: auto;
-      align-self: center;
-    }
-
-  .toolbar .center {
-    flex-grow: 1;
-    align-self: center;
-
-    display: flex;
-  }
-
-  .toolbar .right {
-    align-self: center;
-
-    display: flex;
-  }
-
-.toolbar.secondary {
+/*  */
+.bar.secondary {
   height: 17px;
   padding: 3px;
 
@@ -228,25 +231,7 @@ p {
   text-shadow: 0 1px rgba(255,255,255,0.4);
 }
 
-.toolbar.bottom {
-  position: absolute;
-  bottom: 0;
-
-  height: 17px;
-  width: -webkit-calc(100% - 6px);
-  padding: 3px;
-
-  background-image: linear-gradient(rgb(222,222,222), rgb(195,195,195));
-
-  border-radius: 0 0 3px 3px;
-  border-top: 1px solid rgb(124,124,124);
-  border-bottom: none;
-
-  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
-              inset 0 -1px 0 0 rgba(255,255,255,0.2);
-}
-
-.toolbar.inline {
+.bar.inline {
   position: absolute;
   bottom: 0;
 
@@ -264,6 +249,24 @@ p {
 
   box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),
               inset 0 -1px 0 0 rgba(0,0,0,0.06);
+}
+
+.bar.bottom {
+  position: absolute;
+  bottom: 0;
+
+  height: 17px;
+  width: -webkit-calc(100% - 6px);
+  padding: 3px;
+
+  background-image: linear-gradient(rgb(222,222,222), rgb(195,195,195));
+
+  border-radius: 0 0 3px 3px;
+  border-top: 1px solid rgb(124,124,124);
+  border-bottom: none;
+
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
+              inset 0 -1px 0 0 rgba(255,255,255,0.2);
 }
 
 /*
@@ -299,7 +302,7 @@ p {
   background-color: rgba(61,155,218);
 }
 
-.toolbar .entry {
+.bar .entry {
   background-clip: padding-box;
   background-image: linear-gradient(rgba(0,0,0,0.08), transparent 5px), linear-gradient(rgb(237,237,237), rgb(255,255,255));
   border-color: rgba(0,0,0,0.27);
@@ -324,7 +327,7 @@ p {
   color: rgb(184,184,184);
 }
 
-.toolbar .entry:disabled {
+.bar .entry:disabled {
   background-image: linear-gradient(rgba(0,0,0,0.05), transparent 5px);
   border-color: rgba(0,0,0,0.25);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06),
@@ -472,7 +475,7 @@ a.button {
   text-decoration: none;
 }
 
-.toolbar .button {
+.bar .button {
   border-color: rgba(0,0,0,0.27);
   
   color: rgb(89,89,89);
@@ -505,7 +508,7 @@ a.button {
   fill: rgb(51,51,51);
 }
 
-.toolbar .button.icon {
+.bar .button.icon {
   padding: 4px;
   margin: 3px;
   
@@ -533,8 +536,8 @@ a.button {
               0 1px 0 0 rgba(255,255,255,0.3);
 }
 
-.toolbar .button.icon:active,
-.toolbar .button.icon.active {
+.bar .button.icon:active,
+.bar .button.icon.active {
   background-color: rgba(0,0,0,0.1);
   border-color: transparent;
   box-shadow: none;
@@ -579,7 +582,7 @@ a.button {
   box-shadow: none;
 }
 
-.toolbar.inline .button.flat {
+.bar.inline .button.flat {
   display: inline-block;
   float: left;
   padding: 0;
@@ -588,15 +591,15 @@ a.button {
   border-radius: 0;
 }
 
-.toolbar.inline .left .button.flat {
+.bar.inline .left .button.flat {
   border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-.toolbar.inline .right .button.flat {
+.bar.inline .right .button.flat {
   border-left: 1px solid rgba(0,0,0,0.2);
 }
 
-.toolbar.inline svg {
+.bar.inline svg {
   position: relative;
   left: 4px;
 }
@@ -605,7 +608,7 @@ a.button {
   color: rgb(40,101,142);
 }
 
-.toolbar.inline .button.flat:active {
+.bar.inline .button.flat:active {
   background-color: rgba(0,0,0,0.1);
   box-shadow: none;
 }
