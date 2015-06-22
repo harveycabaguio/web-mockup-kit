@@ -1,3 +1,7 @@
+/*
+ * Basic styling
+ */
+
 body,
 nav,
 div,
@@ -89,7 +93,7 @@ p {
   box-shadow: 0 4px 16px 4px rgba(0,0,0,0.7);
 }
 
-  .window.control {
+  .control {
     display: inline-block;
     height: 22px;
     width: 22px;
@@ -97,27 +101,26 @@ p {
     border: 1px solid rgba(0,0,0,0);
   }
 
-    .left .window.control {
+    .left .control {
       margin-right: 9px;
     }
 
-    .right .window.control {
+    .right .control {
       margin-left: 9px;
     }
 
-    .window.control svg {
+    .control svg {
       position: relative;
       top: 3px;
       left: 3px;
     }
 
-  .window.control:hover {
-    border-width: 1px;
+  .control:hover {
     border-style: solid;
     border-radius: 2.5px;
   }
 
-  .window.control:hover:active {
+  .control:hover:active {
     background-color: rgba(0,0,0,0.15);
   }
 
@@ -157,6 +160,111 @@ p {
     content: ' ';
     transition: all 200ms ease-in;
   }
+
+/*
+ * Toolbars
+ */
+
+.toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  padding: 6px;
+  width: calc(100% - 12px);
+
+  background-image: linear-gradient(rgb(222,222,222), rgb(186,186,186));
+
+  border-bottom: 1px solid rgb(124,124,124);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
+  box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.2),
+              inset 0 1px 0 0 rgba(255,255,255,0.6);
+
+  text-shadow: 0 1px rgba(255,255,255,0.4);
+}
+
+  /* vertically center all toolbar items */
+  .toolbar * {
+    vertical-align: middle;
+  }
+
+  .toolbar .left {
+    align-self: center;
+    margin-right: auto;
+
+    display: flex;
+  }
+
+    .toolbar .left * {
+      flex-basis: auto;
+      align-self: center;
+    }
+
+  .toolbar .center {
+    flex-grow: 1;
+    align-self: center;
+
+    display: flex;
+  }
+
+  .toolbar .right {
+    align-self: center;
+
+    display: flex;
+  }
+
+.toolbar.secondary {
+  height: 17px;
+  padding: 3px;
+
+  background-image: linear-gradient(rgb(186,186,186), rgb(178,178,178));
+
+  border-radius: 0;
+
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3),
+              inset 0 -1px 0 0 rgba(255,255,255,0.2);
+
+  text-shadow: 0 1px rgba(255,255,255,0.4);
+}
+
+.toolbar.bottom {
+  position: absolute;
+  bottom: 0;
+
+  height: 17px;
+  width: -webkit-calc(100% - 6px);
+  padding: 3px;
+
+  background-image: linear-gradient(rgb(222,222,222), rgb(195,195,195));
+
+  border-radius: 0 0 3px 3px;
+  border-top: 1px solid rgb(124,124,124);
+  border-bottom: none;
+
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5),
+              inset 0 -1px 0 0 rgba(255,255,255,0.2);
+}
+
+.toolbar.inline {
+  position: absolute;
+  bottom: 0;
+
+  height: 24px;
+  width: 100%;
+  padding: 0;
+
+  background-image: linear-gradient(rgb(235,235,235), rgb(250,250,250));
+
+  border-top: 1px solid;
+  border-bottom: none;
+  border-color: rgb(155,155,155);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),
+              inset 0 -1px 0 0 rgba(0,0,0,0.06);
+}
 
 /*
  * Text Field
