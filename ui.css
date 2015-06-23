@@ -786,9 +786,8 @@ nav .slingshot {
 }
 
 nav #datetime {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav .indicator:not(#datetime) {
