@@ -80,13 +80,9 @@ p {
 .window,
 .popover {
   position: relative;
-  overflow-y: hidden;
 
   display: block;
-  height: 80vh;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 10vh;
+  overflow-y: hidden;
 
   background-color: rgb(255,255,255);
   background-clip: padding-box;
@@ -97,6 +93,7 @@ p {
   box-shadow: 0 4px 16px 4px rgba(0,0,0,0.7);
 }
 
+  /* Close/Maximize Buttons */
   .control {
     display: inline-block;
     height: 22px;
@@ -216,13 +213,15 @@ p {
   text-shadow: 0 1px rgba(255,255,255,0.4);
 }
 
-/*  */
+/* secondary toolbar */
+/* no examples in elementary apps, just wing the margins and stuff */
 .bar.secondary {
   height: 17px;
   padding: 3px;
 
   background-image: linear-gradient(rgb(186,186,186), rgb(178,178,178));
 
+  border-bottom: 1px solid rgb(124,124,124);
   border-radius: 0;
 
   box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3),
@@ -231,11 +230,12 @@ p {
   text-shadow: 0 1px rgba(255,255,255,0.4);
 }
 
+/* toolbar for lists */
 .bar.inline {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
 
-  height: 24px;
+  height: 22px;
   width: 100%;
   padding: 0;
 
@@ -255,7 +255,7 @@ p {
   position: absolute;
   bottom: 0;
 
-  height: 17px;
+  height: 18px;
   width: -webkit-calc(100% - 6px);
   padding: 3px;
 
@@ -441,11 +441,6 @@ input[type=range]:focus::-webkit-slider-thumb {
  * Button
  */
 
-/* background color fix */
-input[type=button] {
-  background-color: transparent;
-}
-
 .button {
   height: 24px;
   padding: 0 12px;
@@ -466,6 +461,11 @@ input[type=button] {
   transition: all 200ms ease-in;
 }
 
+/* background color fix */
+input[type=button] {
+  background-color: transparent;
+}
+
 /* fixes for buttons made with anchors */
 a.button {
   display: inline-block;
@@ -475,7 +475,9 @@ a.button {
   text-decoration: none;
 }
 
-.bar .button {
+/* toolbar specific styling */
+
+.header .button {
   border-color: rgba(0,0,0,0.27);
   
   color: rgb(89,89,89);
@@ -488,6 +490,20 @@ a.button {
   
   line-height: 18px;
 }
+
+.inline .button.icon {
+  display: inline-block;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+
+  border-radius: 0;
+}
+
+  .inline .button.icon * {
+    margin-top: 3px;
+    margin-left: 3px;
+  }
 
 .button:focus {
   outline: none;
@@ -508,9 +524,9 @@ a.button {
   fill: rgb(51,51,51);
 }
 
-.bar .button.icon {
-  padding: 4px;
-  margin: 3px;
+.header .button.icon {
+  padding: 3px;
+  margin: 4px;
   
   background: transparent;
 
@@ -582,35 +598,8 @@ a.button {
   box-shadow: none;
 }
 
-.bar.inline .button.flat {
-  display: inline-block;
-  float: left;
-  padding: 0;
-  width: 24px;
-
-  border-radius: 0;
-}
-
-.bar.inline .left .button.flat {
-  border-right: 1px solid rgba(0,0,0,0.2);
-}
-
-.bar.inline .right .button.flat {
-  border-left: 1px solid rgba(0,0,0,0.2);
-}
-
-.bar.inline svg {
-  position: relative;
-  left: 4px;
-}
-
 .button.flat:hover {
   color: rgb(40,101,142);
-}
-
-.bar.inline .button.flat:active {
-  background-color: rgba(0,0,0,0.1);
-  box-shadow: none;
 }
 
 .button.flat:active,
@@ -788,7 +777,7 @@ nav .slingshot {
 nav #datetime {
   margin-left: auto;
   margin-right: auto;
-}
+}0
 
 nav .indicator:not(#datetime) {
   height: 16px;
